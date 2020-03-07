@@ -31,7 +31,7 @@ namespace ChangeAudit.WebApi.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             else if (request.OldValue == request.NewValue)
-                return BadRequest("There was not change in the data. This request cannot be audited.");
+                return BadRequest("There is no change in the data. This request cannot be recorded as audit.");
             else if ((await changeAuditService.GetDeviceTypeId(request.DeviceTypeCode)) == 0)
                 return BadRequest("Invalid Device Type Code.");
             else

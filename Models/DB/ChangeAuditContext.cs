@@ -39,7 +39,6 @@ namespace ChangeAudit.WebApi.Models.DB
         public ChangeAuditContext(DbContextOptions<ChangeAuditContext> options)
             : base(options)
         {
-
         }
     }
 }
